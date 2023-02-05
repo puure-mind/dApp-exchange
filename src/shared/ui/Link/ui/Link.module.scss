@@ -1,0 +1,9 @@
+@import "./src/app/App.module";
+
+.link{
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: $text-secondary;
+  font-weight: 500;
+}

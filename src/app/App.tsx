@@ -1,6 +1,23 @@
 import React from "react";
-import "./App.module.scss";
+import styles from "./App.module.scss";
+import { AppRoutes } from "./routes";
 
 export const App = () => {
-  return <div className="App" />;
+  return (
+    <>
+      <BgAnim />
+      <AppRoutes />
+    </>
+  );
+};
+
+const BgAnim = () => {
+  return (
+    <figure className={styles.figure}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </figure>
+  );
 };

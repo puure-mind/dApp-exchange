@@ -1,1 +1,78 @@
+/*===vars===*/
+$xs: 0px;
+$sm: 375px;
+$md: 900px;
+$lg: 1200px;
+$xl: 1440px;
 
+$main-color: #ffffff;
+
+$primary-color: #08D899;
+$primary-light-color: #B2F1DE;
+$secondary-color: #CDD2DD;
+
+$text-white: #ffffff;
+$text-main: #B2F1DE;
+$text-secondary: #676767;
+
+/*===mixins===*/
+@mixin img-fit{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@mixin container{
+  margin: 0px 20px;
+
+  @media screen and (min-width: $md) {
+    //max-width: Calc(#{$xl} - (70px*2));
+    margin: 0px 70px;
+  }
+}
+
+/*shared classes*/
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  @include container;
+}
+
+:export {
+    xs: $xs;
+    sm: $sm;
+    md: $md;
+    lg: $lg;
+    xl: $xl;
+}
+
+
+
+
+@keyframes circle {
+  to { transform: rotate(1turn); }
+}
+@keyframes updown {
+  to { transform: translateY(200); }
+}
+.figure {
+  height: 100vh;
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  animation: updown 60s infinite ease-in-out alternate;
+  filter: blur(50px);
+  overflow: hidden;
+
+  div {
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    background: $primary-color;
+    transform-origin: center 300%;
+    animation: circle 20s infinite ease-out;
+  }
+
+}

@@ -1,0 +1,16 @@
+@import "./src/app/App.module";
+
+.btn{
+  background: $primary-color;
+  border-radius: 8px;
+  color: $text-white;
+  border:none;
+
+  span{
+    font-size: 18px;
+  }
+
+  &.shadow{
+    box-shadow: 0px 8px 16px rgba(8, 216, 153, 0.2);
+  }
+}

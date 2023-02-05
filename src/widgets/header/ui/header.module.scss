@@ -1,0 +1,43 @@
+@import "./src/app/App.module";
+
+.header{
+  background: #CDD2DD;
+}
+
+.wrapper{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  margin: 0 auto;
+
+  .logo{
+    width: 100px;
+    height: 20px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .wallet{
+    background: $primary-color;
+  }
+
+
+  @media screen and (min-width: $md) {
+    position: relative;
+    justify-content: flex-end;
+
+    .logo{
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      width: 150px;
+      height: 25px;
+    }
+  }
+}
+

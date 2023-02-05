@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0px 20px;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    margin: 0px 70px;
+  }
+}
+
+/*# sourceMappingURL=App.module.css.map */

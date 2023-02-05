@@ -1,0 +1,66 @@
+@import-normalize; /*===vars===*/
+/*===mixins===*/
+/*shared classes*/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0px 20px;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    margin: 0px 70px;
+  }
+}
+
+:export {
+  xs: 0px;
+  sm: 375px;
+  md: 900px;
+  lg: 1200px;
+  xl: 1440px;
+}
+
+@keyframes circle {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes updown {
+  to {
+    transform: translateY(200);
+  }
+}
+.figure {
+  height: 100vh;
+  position: absolute;
+  right: 50%;
+  z-index: -1;
+  animation: updown 60s infinite ease-in-out alternate;
+  filter: blur(50px);
+  overflow: hidden;
+}
+.figure div {
+  width: 200px;
+  height: 100px;
+  border-radius: 50%;
+  background: #08D899;
+  transform-origin: center 300%;
+  animation: circle 20s infinite ease-out;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  background: #CDD2DD;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=index.module.css.map */

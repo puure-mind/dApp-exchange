@@ -1,0 +1,14 @@
+.wrapper {
+  width: 200px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper img {
+  width: 20px;
+  height: 20px;
+  object-fit: fill;
+}
+
+/*# sourceMappingURL=Socials.module.css.map */
