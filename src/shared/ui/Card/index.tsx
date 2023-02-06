@@ -1,3 +1,3 @@
-export const Card = () => {
-  return <div>CardComponent</div>;
-};
+export { CardContent } from "./components/CardContent";
+export { Card } from "./components/Card";
+export { CardTitle } from "./components/CardTitle";

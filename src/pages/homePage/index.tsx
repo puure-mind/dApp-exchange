@@ -1,3 +1,12 @@
+import { PlaceOrder } from "../../widgets/placeOrder";
+import { Container } from "../../shared/ui";
+
 export const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <>
+      <Container>
+        <PlaceOrder />
+      </Container>
+    </>
+  );
 };

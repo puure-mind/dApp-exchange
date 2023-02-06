@@ -1,0 +1,23 @@
+@import './src/app/App.module';
+
+.tab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 16px;
+  width: 70px;
+  height: 35px;
+
+  &.active{
+    border-bottom: 2px $primary-color solid;
+  }
+
+  span{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20;
+    text-align: center;
+    cursor:pointer;
+  }
+
+}

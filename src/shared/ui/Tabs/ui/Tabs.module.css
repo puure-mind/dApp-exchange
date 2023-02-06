@@ -1,0 +1,9 @@
+.tabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 4px;
+  gap: 8px;
+}
+
+/*# sourceMappingURL=Tabs.module.css.map */

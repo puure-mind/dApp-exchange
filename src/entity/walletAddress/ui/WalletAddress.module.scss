@@ -38,6 +38,7 @@
   .connect{
     width: 18px;
     height: 18px;
+    cursor: pointer;
 
     img{
       @include img-fit;

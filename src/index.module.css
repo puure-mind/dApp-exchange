@@ -22,9 +22,52 @@
   xl: 1440px;
 }
 
-@keyframes circle {
-  to {
-    transform: rotate(1turn);
+@keyframes figure1 {
+  0% {
+    transform: translate(50%, 50%) rotate(50deg);
+  }
+  25% {
+    transform: translate(75%, 25%) rotate(150deg);
+  }
+  50% {
+    transform: translate(150%, 25%) rotate(50deg);
+  }
+  75% {
+    transform: translate(75%, 0%) rotate(150deg);
+  }
+  100% {
+    transform: translate(50%, 50%) rotate(50deg);
+  }
+}
+@keyframes figure2 {
+  0% {
+    transform: translate(0%, 0%) rotate(10deg);
+  }
+  25% {
+    transform: translate(20%, -20%) rotate(60deg);
+  }
+  50% {
+    transform: translate(50%, -50%) rotate(180deg);
+  }
+  75% {
+    transform: translate(20%, -20%) rotate(60deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(10deg);
+  }
+}
+@keyframes figure4 {
+  0% {
+    transform: translate(0%, 0%) rotate(50deg);
+  }
+  20% {
+    transform: translate(175%, -75%) rotate(30deg);
+  }
+  80% {
+    transform: translate(175%, 75%) rotate(30deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(50deg);
   }
 }
 @keyframes updown {
@@ -33,12 +76,18 @@
   }
 }
 .figure {
-  height: 100vh;
+  margin: 0;
+  height: 100%;
+  width: 100%;
   position: absolute;
-  right: 50%;
   z-index: -1;
   animation: updown 60s infinite ease-in-out alternate;
   filter: blur(50px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   overflow: hidden;
 }
 .figure div {
@@ -48,6 +97,34 @@
   background: #08D899;
   transform-origin: center 300%;
   animation: circle 20s infinite ease-out;
+}
+.figure > div:nth-child(1) {
+  width: 300px;
+  height: 250px;
+  transform: translate(50%, 50%) rotate(50deg);
+  transform-origin: center -50%;
+  animation: figure1 25s infinite ease-out reverse;
+}
+.figure > div:nth-child(2) {
+  width: 350px;
+  height: 200px;
+  transform: translate(0%, 0%) rotate(10deg);
+  transform-origin: center -50%;
+  animation: figure2 15s infinite ease-out;
+}
+.figure > div:nth-child(3) {
+  width: 450px;
+  height: 300px;
+  transform: translate(0%, 0%) rotate(10deg);
+  transform-origin: -20% center;
+  animation: figure2 15s infinite ease-out;
+}
+.figure > div:nth-child(4) {
+  width: 150px;
+  height: 200px;
+  transform: translate(50%, 50%) rotate(50deg);
+  transform-origin: -20% center;
+  animation: figure4 15s infinite ease-out;
 }
 
 body {

@@ -1,5 +1,6 @@
+import { walletSaga } from "../../shared/services/wallet";
+import { spawn } from "redux-saga/effects";
+
 export function* rootSaga() {
-  yield setTimeout(() => {
-    console.log("after 5 sec");
-  }, 5000);
+  yield spawn(walletSaga.rootSaga);
 }
